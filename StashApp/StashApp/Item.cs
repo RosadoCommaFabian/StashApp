@@ -1,16 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using System.Text;
+using SQLite;
 
 namespace StashApp
 {
-    internal class Item
+    class StashedProduct
     {
+        [PrimaryKey, AutoIncrement]
+        public int StashID { get; set; }
+        [MaxLength(128)]
         public string Name { get; set; }
+        [MaxLength(32)]
         public string Store { get; set; }
-        public string Price { get; set; }
-        public string Quantity { get; set; }
-        public string PurchaseDate { get; set; }
-        public string ExpireDate { get; set; }
+        public float Price { get; set; }
+        public DateTime PurchaseDate { get; set; }
+        public DateTime ExpireDate { get; set; }
+    }
+    class UPCListings
+    {
+        [PrimaryKey, AutoIncrement]
+        public int UpcID { get; set; }
+        [MaxLength(128)]
+        public string ProductName { get; set; }
+        public int UPC { get; set; }
     }
 }

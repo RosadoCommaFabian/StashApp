@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-using MySqlConnector;
+using SQLite;
 using System.Data;
 
 namespace StashApp
