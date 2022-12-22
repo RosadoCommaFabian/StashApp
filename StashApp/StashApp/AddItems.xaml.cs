@@ -8,16 +8,16 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using ZXing.Net.Mobile.Forms;
-using MySqlConnector;
 using System.Collections.ObjectModel;
 using Syncfusion.XForms.Pickers;
+using SQLite;
 
 namespace StashApp
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class AddItems : ContentPage
     {
-        public AddItems(ObservableCollection<ItemBindable> stash)
+        public AddItems(ObservableCollection<ItemBindable> stash, SQLiteConnection db)
         {
             InitializeComponent();
 

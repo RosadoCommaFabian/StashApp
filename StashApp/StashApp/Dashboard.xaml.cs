@@ -10,6 +10,7 @@ using Xamarin.Forms.Xaml;
 using Syncfusion.XForms.Pickers;
 using static Xamarin.Forms.Internals.Profile;
 using System.Globalization;
+using SQLite;
 
 namespace StashApp
 {
@@ -21,7 +22,7 @@ namespace StashApp
         public DashBindable itemsFresh = new DashBindable();
         public DashBindable itemsSoon = new DashBindable();
 
-        public Dashboard(ObservableCollection<ItemBindable> stash)
+        public Dashboard(ObservableCollection<ItemBindable> stash, SQLiteConnection db)
         {
             InitializeComponent();
 

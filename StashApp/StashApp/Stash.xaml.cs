@@ -17,13 +17,11 @@ namespace StashApp
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Stash : ContentPage
     {
-        public Stash(ObservableCollection<ItemBindable> stash)
+        public Stash(ObservableCollection<ItemBindable> stash, SQLiteConnection db)
         {
             InitializeComponent();
 
             BackgroundColor = Color.LightGreen;
-
-            MySqlConnection conn;
 
             Label desc = new Label()
             {

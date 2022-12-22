@@ -18,12 +18,12 @@ namespace StashApp
         public DateTime PurchaseDate { get; set; }
         public DateTime ExpireDate { get; set; }
     }
-    class UPCListings
+    class BarcodeListings
     {
         [PrimaryKey, AutoIncrement]
-        public int UpcID { get; set; }
+        public int ID { get; set; }
         [MaxLength(128)]
-        public string ProductName { get; set; }
-        public int UPC { get; set; }
+        public string Name { get; set; }
+        public int Barcode { get; set; }
     }
 }
